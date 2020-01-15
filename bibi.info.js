@@ -1,5 +1,5 @@
 /*!
- *                                                                                                                          (邃 )
+ *                                                                                                                          (℠)
  *  # Additional Webpack Config for Bibi
  *
  */
@@ -7,7 +7,7 @@
 'use strict';
 
 const Bibi = {
-    'version': '1.0.1',
+    'version': '1.0.2',
     'author': {
         'name': 'Satoru MATSUSHIMA'
     },
@@ -31,7 +31,7 @@ Bibi.WithBCK = (Bibi.Arguments['bc'] || Bibi.ForPack);
 // =============================================================================================================================
 
 const _banner = (Name, Credit, Extra, Mark) => '/*!' + `
- *` + (!Mark ? '' : `                                                                                                                          (邃 )`) + `
+ *` + (!Mark ? '' : `                                                                                                                          (℠)`) + `
  *  # ${ Name }
  *` + (!Credit ? '' : (Credit == 'default' ? `
  *  * Copyright (c) ${ Bibi.author.name } - ${ Bibi.homepage }
@@ -115,6 +115,11 @@ Bibi.Banners = {
  *  * Including:
  *      - Bibi Zip Loader ... Copyright (c) Lunascape - https://github.com/lunascape/bibi-zip-loader (Licensed under the MIT License.)
 `, true),
+
+'/extensions/extractor/on-the-fly.bibi-zip-loader.worker.js': _banner('Bibi-Zip-Loader (Worker)', `
+ *  * Copyright (c) Lunascape - https://github.com/lunascape/bibi-zip-loader
+ *  * Licensed under the MIT License.
+`, null, null),
 
 '/extensions/extractor/at-once.js': _banner('Bibi Extension: Extractor (at once)', 'default', `
  *  * Including:
